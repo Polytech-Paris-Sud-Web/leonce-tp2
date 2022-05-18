@@ -14,11 +14,11 @@ export class ArticleService {
 
 
   public getArticles(): Observable<Article[]> {
-    return this.http.get<Article[]>("http://localhost:3000/articles?_sort=date&_order=desc");
+    return this.http.get<Article[]>(`${environment.apiUrl}/articles?_sort=date&_order=desc`);
   }
 
   public getTopArticles(): Observable<Article[]> {
-    return this.http.get<Article[]>("http://localhost:3000/articles?_sort=date&_order=desc&_page=1");
+    return this.http.get<Article[]>(`${environment.apiUrl}/articles?_sort=date&_order=desc&_page=1`);
   }
 
   public getArticle(id: number): Observable<Article> {
@@ -35,6 +35,6 @@ export class ArticleService {
       ...article
     };
 
-    return this.http.post<Article>("http://localhost:3000/articles", body);
+    return this.http.post<Article>(`${environment.apiUrl}/articles`, body);
   }
 }
