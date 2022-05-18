@@ -1,0 +1,106 @@
+{
+  "articles": [
+    {
+      "date": "2022-05-18T18:42:25.799Z",
+      "title": "My First Article",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "author": "John Doe",
+      "id": 1
+    },
+    {
+      "date": "2022-05-18T18:42:25.799Z",
+      "title": "Second Article",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "author": "John Doe",
+      "id": 2
+    },
+    {
+      "date": "2022-05-18T18:42:25.799Z",
+      "title": "Third Article",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "author": "John Doe",
+      "id": 3
+    },
+    {
+      "date": "2022-05-18T18:42:25.799Z",
+      "title": "Fake Title",
+      "content": "Voici un nouvel article !  Voici un nouvel article ! Voici un nouvel article ! Voici un nouvel article ! ",
+      "author": "Seb",
+      "id": 4
+    },
+    {
+      "date": "2022-05-18T18:42:25.799Z",
+      "title": "My First Article",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "author": "John Doe",
+      "id": 5
+    },
+    {
+      "title": "Second Article",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "author": "John Doe",
+      "id": 6
+    },
+    {
+      "date": "2022-05-18T18:42:25.799Z",
+      "title": "Third Article",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "author": "John Doe",
+      "id": 7
+    },
+    {
+      "date": "2022-05-18T18:42:25.799Z",
+      "title": "Fake Title",
+      "content": "Voici un nouvel article !  Voici un nouvel article ! Voici un nouvel article ! Voici un nouvel article ! ",
+      "author": "Seb",
+      "id": 8
+    },
+    {
+      "date": "2022-05-18T18:42:25.799Z",
+      "title": "Second Article",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "author": "John Doe",
+      "id": 10
+    },
+    {
+      "date": "2022-05-18T18:42:25.799Z",
+      "title": "Third Article",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "author": "John Doe",
+      "id": 11
+    },
+    {
+      "date": "2022-05-18T18:42:25.799Z",
+      "title": "Last",
+      "content": "Voici un nouvel article !  Voici un nouvel article ! Voici un nouvel article ! Voici un nouvel article ! ",
+      "author": "Seb",
+      "id": 12
+    },
+    {
+      "date": "2022-05-18T18:42:25.799Z",
+      "title": "Fake Title",
+      "content": "erzerzerzer",
+      "author": "rezrzrze",
+      "id": 13
+    },
+    {
+      "date": "2022-05-18T18:49:17.007Z",
+      "title": "Fake Title",
+      "content": "frefeszfsdfs",
+      "author": "fdsfsf",
+      "id": 14
+    }
+  ],
+  "authors": [
+    {
+      "name": "John Doe",
+      "bio": "Auteur célèbre du blog",
+      "id": 1
+    },
+    {
+      "name": "Seb",
+      "bio": "Meilleur auteur du blog",
+      "id": 2
+    }
+  ]
+}

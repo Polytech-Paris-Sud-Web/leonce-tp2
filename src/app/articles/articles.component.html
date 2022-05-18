@@ -1,0 +1,19 @@
+<div class="overflow-y-auto h-full flex flex-col space-y-4 self-center pr-4">
+    <div class="fixed">
+        <input 
+            (input)="searchKeyword($event)"
+            (ngModelChange)="searchKeyword"
+            type="text" 
+            class="form-input px-4 py-3 rounded-full w-[400px]" 
+            placeholder="Recherche d'article"
+            
+        >
+    </div>
+    <app-article 
+        *ngFor="let article of filteredArticles" 
+        [article]="article"
+        (deletedArticle)="delete($event)"
+        class="!mt-14"
+    >
+    </app-article>
+</div>
