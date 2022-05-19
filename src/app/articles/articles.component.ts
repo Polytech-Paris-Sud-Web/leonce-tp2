@@ -23,7 +23,7 @@ export class ArticlesComponent implements OnInit {
   }
 
   delete(article: Article) {
-    this.articleService.deleteArticle(article.id).subscribe(value => {
+    this.articleService.deleteArticle(article.id).subscribe(_ => {
       this.articles = this.articles.filter(value => value.id !== article.id);
     });
   }
