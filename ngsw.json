@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1653035121289,
+  "timestamp": 1653035206924,
   "index": "/leonce-tp2/index.html",
   "assetGroups": [
     {
@@ -48,7 +48,7 @@
         "http:\\/\\/localhost:3000\\/.*",
         "https:\\/\\/my-json-server\\.typicode\\.com\\/Polytech-Paris-Sud-Web\\/leonce-tp2\\/.*"
       ],
-      "strategy": "performance",
+      "strategy": "freshness",
       "maxSize": 100,
       "maxAge": 259200000,
       "cacheQueryOptions": {
