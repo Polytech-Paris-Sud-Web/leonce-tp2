@@ -36,7 +36,7 @@
         "https://my-json-server.typicode.com/Polytech-Paris-Sud-Web/leonce-tp2/**"
       ],
       "cacheConfig": {
-        "strategy": "performance",
+        "strategy": "freshness",
         "maxSize": 100,
         "maxAge": "3d"
       }
