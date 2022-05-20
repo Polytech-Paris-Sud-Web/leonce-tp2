@@ -31,11 +31,9 @@ export class ArticleService {
 	}
 
 	public getArticles(): Observable<Article[]> {
-		return this.preloadArticles
-			? of(this.preloadArticles)
-			: this.http.get<Article[]>(
-					`${environment.apiUrl}/articles?_sort=date&_order=desc`
-			  );
+		return this.http.get<Article[]>(
+			`${environment.apiUrl}/articles?_sort=date&_order=desc`
+		);
 	}
 
 	public getTopArticles(): Observable<Article[]> {
@@ -64,5 +62,18 @@ export class ArticleService {
 		};
 
 		return this.http.post<Article>(`${environment.apiUrl}/articles`, body);
+	}
+
+	public searchArticles(keyword: string): Observable<Article[]> {
+		return this.getArticles().pipe(
+			map(articles =>
+				articles.filter(
+					article =>
+						article.title.includes(keyword) ||
+						article.content.includes(keyword) ||
+						article.author.includes(keyword)
+				)
+			)
+		);
 	}
 }

@@ -32,11 +32,8 @@ export class TopArticlesComponent implements OnInit {
 	searchKeyword(e: Event) {
 		const keyword = (<HTMLInputElement>e.target).value;
 
-		this.filteredArticles = this.articles.filter(
-			value =>
-				value.title.includes(keyword) ||
-				value.content.includes(keyword) ||
-				value.author.includes(keyword)
-		);
+		this.articleService.searchArticles(keyword).subscribe(value => {
+			this.filteredArticles = value;
+		});
 	}
 }
