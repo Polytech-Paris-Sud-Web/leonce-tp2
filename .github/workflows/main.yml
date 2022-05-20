@@ -12,9 +12,15 @@ jobs:
       run: npm install
     - name: Run test 🧪
       run: npm run test:prod
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Run lint 🧪
+      run: npm run lint
   build:
     runs-on: ubuntu-latest
-    needs: test
+    needs: [test, lint]
     steps:
     - uses: actions/checkout@v2
     - name: Angular Deploy gh-pages Actions
