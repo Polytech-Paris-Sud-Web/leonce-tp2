@@ -10,11 +10,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class AuthorComponent implements OnInit {
 	@Input()
-	author: Author = {
-		name: 'Inconnu',
-		id: 0,
-		bio: "Pas d'information sur cet auteur",
-	};
+	author: Author | undefined;
 
 	constructor(
 		private route: ActivatedRoute,
