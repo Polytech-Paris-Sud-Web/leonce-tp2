@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class ArticleComponent {
 	@Input()
-	article!: Article;
+	article: Article | undefined;
 
 	@Output()
 	deletedArticle: EventEmitter<Article> = new EventEmitter();
@@ -21,10 +21,10 @@ export class ArticleComponent {
 	}
 
 	showAuthorName() {
-		this.route.navigate(['/author', this.article.author]);
+		this.route.navigate(['/author', this.article?.author]);
 	}
 
 	openDetails() {
-		this.route.navigate(['/article', this.article.id]);
+		this.route.navigate(['/article', this.article?.id]);
 	}
 }

@@ -54,15 +54,18 @@
         "plugin:prettier/recommended"
       ],
       "rules": {
-        "prettier/prettier":[  //or whatever plugin that is causing the clash
+        "prettier/prettier": [  //or whatever plugin that is causing the clash
             "error",
             {
                 "tabWidth":4,
                 "useTabs":true,
                 "parser": "angular"
             }
-          ]
+        ]
       }
     }
-  ]
+  ],
+  "rules": {
+    "no-console": 2
+  }
 }

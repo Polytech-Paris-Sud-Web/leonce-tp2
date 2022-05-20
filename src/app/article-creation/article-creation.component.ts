@@ -35,8 +35,6 @@ export class ArticleCreationComponent {
 			author,
 		};
 
-		this.articleService.addArticle(newArticle).subscribe(value => {
-			console.log(value);
-		});
+		this.articleService.addArticle(newArticle).subscribe();
 	}
 }
