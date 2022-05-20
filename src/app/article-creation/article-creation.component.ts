@@ -1,39 +1,42 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, FormBuilder, Validators } from '@angular/forms';
+import {
+	FormControl,
+	FormGroup,
+	FormBuilder,
+	Validators,
+} from '@angular/forms';
 import { Article } from '../models/Article';
 import { ArticleService } from '../article.service';
 
 @Component({
-  selector: 'app-article-creation',
-  templateUrl: './article-creation.component.html',
-  styleUrls: ['./article-creation.component.css']
+	selector: 'app-article-creation',
+	templateUrl: './article-creation.component.html',
+	styleUrls: ['./article-creation.component.css'],
 })
-export class ArticleCreationComponent implements OnInit {
+export class ArticleCreationComponent {
+	articleForm: FormGroup;
 
-  articleForm : FormGroup;
+	constructor(
+		private fb: FormBuilder,
+		private articleService: ArticleService
+	) {
+		this.articleForm = this.fb.group({
+			title: ['Fake Title', Validators.required],
+			content: ['', Validators.required],
+			author: ['', Validators.required],
+		});
+	}
 
-  constructor(private fb: FormBuilder, private articleService: ArticleService) {
-    this.articleForm = this.fb.group({
-      title: ['Fake Title', Validators.required ],
-      content : ['', Validators.required ],
-      author : ['', Validators.required ],
-    });
-  } 
+	createArticle() {
+		const { title, content, author } = this.articleForm.value;
+		const newArticle = {
+			title,
+			content,
+			author,
+		};
 
-
-  ngOnInit(): void { }
-
-  createArticle() {
-    const { title, content, author } = this.articleForm.value;
-    const newArticle = {
-      title,
-      content,
-      author
-    }
-
-    this.articleService.addArticle(newArticle).subscribe(value => {
-      console.log(value);
-    });
-  }
-
+		this.articleService.addArticle(newArticle).subscribe(value => {
+			console.log(value);
+		});
+	}
 }

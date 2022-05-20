@@ -8,16 +8,16 @@ import { AuthorComponent } from './author/author.component';
 import { TopArticlesComponent } from './top-articles/top-articles.component';
 
 const routes: Routes = [
-  { path: 'create', component: ArticleCreationComponent },
-  { path: 'articles', component: ArticlesComponent },
-  { path: 'article/:id', component: ArticleDetailComponent },
-  { path: 'author/:name', component: AuthorComponent },
-  { path: 'top' , component: TopArticlesComponent },
-  { path: '', component: ArticlesComponent }
-]
+	{ path: 'create', component: ArticleCreationComponent },
+	{ path: 'articles', component: ArticlesComponent },
+	{ path: 'article/:id', component: ArticleDetailComponent },
+	{ path: 'author/:name', component: AuthorComponent },
+	{ path: 'top', component: TopArticlesComponent },
+	{ path: '', component: ArticlesComponent },
+];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+	imports: [RouterModule.forRoot(routes)],
+	exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

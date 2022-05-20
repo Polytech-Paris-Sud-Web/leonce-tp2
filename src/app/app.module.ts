@@ -16,28 +16,28 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    ArticleComponent,
-    ArticlesComponent,
-    ArticleCreationComponent,
-    ArticleDetailComponent,
-    AuthorComponent,
-    TopArticlesComponent
-  ],
-  imports: [
-    HttpClientModule,
-    BrowserModule,
-    ReactiveFormsModule,
-    AppRoutingModule,
-    ServiceWorkerModule.register('ngsw-worker.js', {
-      enabled: environment.production,
-      // Register the ServiceWorker as soon as the application is stable
-      // or after 30 seconds (whichever comes first).
-      registrationStrategy: 'registerWhenStable:30000'
-    })
-  ],
-  providers: [ArticleService],
-  bootstrap: [AppComponent]
+	declarations: [
+		AppComponent,
+		ArticleComponent,
+		ArticlesComponent,
+		ArticleCreationComponent,
+		ArticleDetailComponent,
+		AuthorComponent,
+		TopArticlesComponent,
+	],
+	imports: [
+		HttpClientModule,
+		BrowserModule,
+		ReactiveFormsModule,
+		AppRoutingModule,
+		ServiceWorkerModule.register('ngsw-worker.js', {
+			enabled: environment.production,
+			// Register the ServiceWorker as soon as the application is stable
+			// or after 30 seconds (whichever comes first).
+			registrationStrategy: 'registerWhenStable:30000',
+		}),
+	],
+	providers: [ArticleService],
+	bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

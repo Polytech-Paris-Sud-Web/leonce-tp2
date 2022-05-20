@@ -1,21 +1,41 @@
-<div class="overflow-y-auto h-full flex flex-col space-y-4 self-center pr-4 bg-slate-300/50 rounded-xl w-full md:w-[430px] p-4">
-  <h3 class="font-bold text-2xl"><i class="underline">Create your article</i></h3>
-  <form [formGroup]="articleForm" (ngSubmit)="createArticle()" class="space-y-4">
-    <div class="flex items-center justify-between">
-      <span>Title: </span>
-      <input type="text" class="form-input px-4 py-3 rounded-full" formControlName="title">
-    </div>
+<div
+	class="overflow-y-auto h-full flex flex-col space-y-4 self-center pr-4 bg-slate-300/50 rounded-xl w-full md:w-[430px] p-4">
+	<h3 class="font-bold text-2xl">
+		<i class="underline">Create your article</i>
+	</h3>
+	<form
+		[formGroup]="articleForm"
+		(ngSubmit)="createArticle()"
+		class="space-y-4">
+		<div class="flex items-center justify-between">
+			<span>Title: </span>
+			<input
+				type="text"
+				class="form-input px-4 py-3 rounded-full"
+				formControlName="title" />
+		</div>
 
-    <div class="flex items-center justify-between">
-      <span>Content: </span>
-      <textarea type="text" class="form-textarea px-4 py-3 rounded-xl" formControlName="content"></textarea>
-    </div>
+		<div class="flex items-center justify-between">
+			<span>Content: </span>
+			<textarea
+				type="text"
+				class="form-textarea px-4 py-3 rounded-xl"
+				formControlName="content"></textarea>
+		</div>
 
-    <div class="flex items-center justify-between">
-      <span>Author: </span>
-      <input type="text" class="form-input px-4 py-3 rounded-full" formControlName="author">
-    </div>
+		<div class="flex items-center justify-between">
+			<span>Author: </span>
+			<input
+				type="text"
+				class="form-input px-4 py-3 rounded-full"
+				formControlName="author" />
+		</div>
 
-    <button class="bg-blue-600 rounded-full p-4 px-16 font-bold text-white block mx-auto my-auto" [disabled]="articleForm.invalid" type="submit">Save</button>
-  </form>
+		<button
+			class="bg-blue-600 rounded-full p-4 px-16 font-bold text-white block mx-auto my-auto"
+			[disabled]="articleForm.invalid"
+			type="submit">
+			Save
+		</button>
+	</form>
 </div>

@@ -4,35 +4,34 @@ import { ArticleService } from '../article.service';
 import { Article } from '../models/Article';
 
 @Component({
-  selector: 'app-article-detail',
-  templateUrl: './article-detail.component.html',
-  styleUrls: ['./article-detail.component.css']
+	selector: 'app-article-detail',
+	templateUrl: './article-detail.component.html',
+	styleUrls: ['./article-detail.component.css'],
 })
-export class ArticleDetailComponent implements OnInit {
+export class ArticleDetailComponent {
+	@Input()
+	article: Article = {
+		title: '',
+		content: '',
+		author: '',
+		id: 0,
+		date: new Date(),
+	};
 
-  @Input()
-  article : Article = {
-    title: "",
-    content: "",
-    author: "",
-    id: 0,
-    date: new Date()
-  };
+	constructor(
+		private route: ActivatedRoute,
+		private router: Router,
+		private articleService: ArticleService
+	) {
+		const id = parseInt(this.route.snapshot.paramMap.get('id') || '0');
+		this.articleService.getArticle(id).subscribe(value => {
+			this.article = value;
+		});
+	}
 
-  constructor(private route: ActivatedRoute, private router: Router, private articleService: ArticleService) {
-    const id = parseInt(this.route.snapshot.paramMap.get('id') || '0');
-    this.articleService.getArticle(id).subscribe(value => {
-      this.article = value;
-    });
-  }
-
-  ngOnInit(): void {
-  }
-
-  delete(article: Article) {
-    this.articleService.deleteArticle(article.id).subscribe(_value => {
-      this.router.navigate(['/articles']);
-    });
-  }
-
+	delete(article: Article) {
+		this.articleService.deleteArticle(article.id).subscribe(_value => {
+			this.router.navigate(['/articles']);
+		});
+	}
 }
