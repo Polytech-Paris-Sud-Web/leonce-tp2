@@ -1,6 +1,8 @@
-<div class="overflow-y-auto h-full flex flex-col space-y-4 self-center pr-4">
+<div
+	class="overflow-y-auto h-full flex flex-col space-y-4 self-center pr-4"
+	*ngIf="this.article">
 	<app-article
-		[article]="article"
+		[article]="this.article"
 		(deletedArticle)="delete($event)"
 		class="!mt-14">
 	</app-article>

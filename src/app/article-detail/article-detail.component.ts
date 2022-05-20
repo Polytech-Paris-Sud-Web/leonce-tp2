@@ -10,23 +10,22 @@ import { Article } from '../models/Article';
 })
 export class ArticleDetailComponent {
 	@Input()
-	article: Article = {
-		title: '',
-		content: '',
-		author: '',
-		id: 0,
-		date: new Date(),
-	};
+	article: Article | undefined;
 
 	constructor(
 		private route: ActivatedRoute,
 		private router: Router,
 		private articleService: ArticleService
 	) {
-		const id = parseInt(this.route.snapshot.paramMap.get('id') || '0');
-		this.articleService.getArticle(id).subscribe(value => {
-			this.article = value;
-		});
+		const id = parseInt(this.route.snapshot.paramMap.get('id') || 'NaN');
+
+		if (id) {
+			this.articleService.getArticle(id).subscribe(value => {
+				this.article = value;
+			});
+		} else {
+			this.router.navigate(['/articles']);
+		}
 	}
 
 	delete(article: Article) {
