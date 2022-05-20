@@ -15,7 +15,6 @@ jobs:
     - name: Badge
       uses:  emibcn/clover-coverage-badges-action@v1
       with:
-        coverage-clover-path: coverage/stslib/clover.xml
         coverage-summary-path: coverage/simple-app/coverage-summary.json
         github_token: ${{ secrets.ACCESS_TOKEN }}
   lint:
