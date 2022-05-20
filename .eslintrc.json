@@ -66,6 +66,6 @@
     }
   ],
   "rules": {
-    "no-console": 2
+    "no-console": ["error", { "allow": ["warn", "error"] }]
   }
 }
